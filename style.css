@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+}
+
+.total {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: #ddd;
+}
+
+.total img.color {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 40%;
+    width: 85%;
+    z-index: 1;
+    animation: color 4s linear infinite;
+}
+
+.total img.dark {
+    position: absolute;
+    bottom: 0;
+    left: -70%;
+    height: 110%;
+    opacity: 0.3;
+    animation: dark 4s linear infinite;
+}
+
+.total .flower {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: flower 4s linear infinite;
+}
+
+.total h1 {
+    font-size: 4rem;
+}
+
+.total h2 {
+    font-size: 2.6rem;
+}
+
+@media(orientation: landscape) {
+    .total img.color {
+        right: 0;
+        height: 65%;
+        width: 60%;
+    }
+
+    .total img.dark {
+        left: 0;
+    }
+
+    .total .flower {
+        top: 5%;
+        right: 0;
+        left: auto;
+        width: 60%;
+    }
+}
+
+@media(min-width: 1025px) {
+    .total h1 {
+        font-size: 6rem;
+    }
+
+    .total h2 {
+        font-size: 4rem;
+    }
+}
+
+@keyframes color {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 0;
+    }
+
+    13% {
+        opacity: 1;
+    }
+
+    87% {
+        opacity: 1;
+    }
+
+    92% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(-5%);
+        opacity: 0;
+    }
+}
+
+@keyframes dark {
+    0% {
+        transform: translateX(0) scale(1);
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 0;
+    }
+
+    13% {
+        opacity: 0.3;
+    }
+
+    87% {
+        opacity: 0.3;
+    }
+
+    92% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(5%) scale(1.1);
+        opacity: 0;
+    }
+}
+
+@keyframes flower {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 0;
+    }
+
+    13% {
+        opacity: 1;
+    }
+
+    87% {
+        opacity: 1;
+    }
+
+    92% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+}
